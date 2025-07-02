@@ -1,9 +1,12 @@
-package Loops;
+package Strings;
 
 public class Reverse {
     public static void main(String[] args) {
-        for(int i=10;i>=1;i--){
-            System.out.println(i);
+        String str="hello world";
+        String reverse="";
+        for(int i=str.length()-1;i>=0;i--){
+            reverse+=str.charAt(i);
         }
+        System.out.println(reverse);
     }
 }
