@@ -1,12 +1,14 @@
-package Strings;
+package Arr;
+
+import java.util.Arrays;
 
 public class Reverse {
     public static void main(String[] args) {
-        String str="hello world";
-        String reverse="";
-        for(int i=str.length()-1;i>=0;i--){
-            reverse+=str.charAt(i);
+        int[] arr={1,2,3,4,5};
+        int[] rev=new int[arr.length];
+        for(int i=arr.length-1, j=0; i>=0;i--,j++){
+        rev[j]=arr[i];
         }
-        System.out.println(reverse);
+        System.out.println(Arrays.toString(rev));
     }
 }
