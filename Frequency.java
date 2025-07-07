@@ -1,25 +1,26 @@
-package Arr;
+package Hash_Map;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Frequency {
     public static void main(String[] args) {
-        int[] arr={5,6,5,3,5,3,1};
-        Map<Integer,Integer> FrequencyMap=new HashMap<>();
+        HashMap<Character,Integer>map=new HashMap<>();
+        String str="helllooo";
 
-        for(int i=0;i<arr.length;i++){
-            if(FrequencyMap.containsKey(arr[i])){
-                int freq=FrequencyMap.get(arr[i]);
-                freq++;
-                FrequencyMap.put(arr[i],freq);
+        str.toCharArray();
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+
+            if(map.containsKey(ch)){
+                map.put(ch, map.get(ch)+1);
             }
             else{
-                FrequencyMap.put(arr[i],1);
+                map.put(ch,1 );
             }
         }
-        for(Map.Entry<Integer,Integer>entry:FrequencyMap.entrySet()){
-            System.out.println("Number: "+entry.getKey()+" Frequency: "+entry.getValue());
+
+        for(char key:map.keySet()){
+          System.out.println(key +"="+map.get(key));
         }
     }
 }
